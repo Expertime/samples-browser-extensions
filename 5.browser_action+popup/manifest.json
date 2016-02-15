@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "browser_action + popup",
+    "description": "browser_action + popup sample extension",
+    "version": "0.0",
+    "background": {
+        "scripts": ["background.js"]
+    },
+	"content_scripts": [{
+		"js": ["content_script.js"],
+		"matches": [
+			"*://www.expertime.com/*"
+		]
+	}],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "browser_action + popup sample extension",
+		"default_popup": "popup.html"
+	}
+}
