@@ -122,11 +122,11 @@ This extension allows you to understand the big difference with the __page actio
 Furthermore, it is always shown (no _show()_ function has been executed) and exists in only one instance.
 
 ## [5. Browser Action + popup](/5.browser_action+popup/)
-The [`content_script.js`](/4.browser_action/content_script.js) is unchanged.
+The [`content_script.js`](/5.browser_action+popup/content_script.js) is unchanged.
 
-The [`manifest.json`](/4.browser_action/manifest.json) file now defines a `default_popup` property for the __browser action__ which is set to a new html file: [`popup.html`](/4.browser_action/popup.html). This __popup__ is shown by clicking on the __browser action__'s icon.
+The [`manifest.json`](/5.browser_action+popup/manifest.json) file now defines a `default_popup` property for the __browser action__ which is set to a new html file: [`popup.html`](/5.browser_action+popup/popup.html). This __popup__ is shown by clicking on the __browser action__'s icon.
 
-The [`popup.html`](/4.browser_action/popup.html) file contains two html elements (a button and a span) and references a [`popup.js`](/4.browser_action/popup.js) script
+The [`popup.html`](/5.browser_action+popup/popup.html) file contains two html elements (a button and a span) and references a [`popup.js`](/5.browser_action+popup/popup.js) script
 > __IMPORTANT:__ inline javascript will never be executed.
   
 What this script does is:
@@ -136,7 +136,7 @@ What this script does is:
 {'action': 'reset_counter'}
 ```
 
-Hence, when the _background page_'s script ([`background.js`](/4.browser_action/background.js)) now catches the new message sent from the _popup page_, it interprets it by:
+Hence, when the _background page_'s script ([`background.js`](/5.browser_action+popup/background.js)) now catches the new message sent from the _popup page_, it interprets it by:
 - setting the counter to zero
 - logging it
 - updating the __browser action__'s badge
