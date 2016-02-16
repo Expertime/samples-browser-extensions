@@ -3,7 +3,8 @@
 The purpose of this repository is to offer basic samples browser extensions.  
 These browser extensions don't have practical real-world usage, they are meant to demonstrate how browser extension work through simple use-case. When building real-life browser extension, you most probably will combine these use-case with more complex code to answer your needs.
 
-For the moment these samples have only been tested compatible with both Chrome and Opera browsers.
+For the moment these samples have only been tested compatible with both Chrome and Opera browsers.  
+If you want to test them with Firefox, please refer to [paragraph 7](#7)  below.
 
 >__NOTE:__ There is no detailed explanation of how browser extensions works. If you want to know more about this, please refer to [Chrome][1] or [Opera][2] official documentation.
 
@@ -151,6 +152,22 @@ These are just basic sample browser extensions.
 
 > __IMPORTANT:__ There is nevertheless an important limitation that you must keep in mind: a browser extension can not have both a __browser action__ and a __page action__.
 
+## 7.<a name="7"></a> A note about Firefox WebExtensions
+As of today (February 16, 2016), Mozilla is working on implementing [WebExtensions][8] in Firefox Nigthly, which is widely similar to what is described above.  
+You can easily test these sample extensions in Firefox Nightly by :
+- adding the following at the end of each manifest.json :
+```javascript
+"applications": {
+       "gecko": {
+         "id": "expertime@expertime"
+       }
+     }
+```
+- zip the content of the folder (not the folder itself) into an .xpi file
+- load that file into Firefox Nigthly as described on [Mozilla's wiki][8]
+
+> __NOTE:__ as of today, event page (example 2 above) are not supported in Firefox WebExtensions
+
 #License
 [MIT](/LICENSE)
 
@@ -161,3 +178,4 @@ These are just basic sample browser extensions.
 [5]: chrome://extensions
 [6]: opera://extensions
 [7]: http://www.expertime.com/
+[8]: https://wiki.mozilla.org/WebExtensions
