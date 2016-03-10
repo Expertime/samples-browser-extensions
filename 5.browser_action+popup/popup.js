@@ -4,7 +4,7 @@ if (mybutton != null && typeof(mybutton) != 'undefined') mybutton.onclick = rese
 
 var myspan = document.querySelector('#myspan');
 if (myspan != null && typeof(myspan) != 'undefined') {
-    if (typeof(myinteger) == 'undefined') myinteger = 0;
+    if (typeof(myinteger) == 'undefined') myinteger = 42;
     else myinteger++;
     myspan.innerText = `${myinteger}`;
 }
