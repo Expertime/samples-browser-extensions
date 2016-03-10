@@ -9,6 +9,9 @@ if (myspan != null && typeof(myspan) != 'undefined') {
     myspan.innerText = `${myinteger}`;
 }
 
+/**
+ * send a message to the background page to reset the counter
+ */
 function resetCounter() {
     browser.runtime.sendMessage( // send a message to the background page
         {'action': 'reset_counter'}, // the message that is send

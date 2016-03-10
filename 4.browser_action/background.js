@@ -13,6 +13,10 @@ browser.runtime.onMessage.addListener((msg, sender, callbackFn) => {
     return;
 });
 
+/**
+ * update the browserAction's badge with the given text
+ * @param {string} text text to set as the browserAction's badge
+ */
 function updateBadge(text) {
     browser.browserAction.setBadgeText({text: `${text}`});
 }

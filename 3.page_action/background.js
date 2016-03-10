@@ -24,6 +24,11 @@ browser.pageAction.onClicked.addListener((tab) => {
     updatePageActionTitle(counter, tab.id);
 });
 
+/**
+ * update the pageAction's title for a specified tab, with the given counter
+ * @param {string} counter counter to show on the pageAction title
+ * @param {number} tabId id of the tab on which to upate the pageAction's title
+ */
 function updatePageActionTitle(counter, tabId) {
     browser.pageAction.setTitle({
         tabId: tabId,                   // on the tab that did send this message
